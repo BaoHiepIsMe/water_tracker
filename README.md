@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+Đề 6: Ứng dụng Theo Dõi Nước uống (Water Tracker)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Thông tin Sinh viên
+    Họ và Tên: Hồ Duy Lợi
+    Mã Số Sinh Viên: 22IT162
+    Lớp: 22SE1
+    Trường: VKU
 
-## Available Scripts
+2. Mô tả Ứng dụng
++ Ứng dụng cho phép người dùng theo dõi lượng nước uống hàng ngày với các chức năng:
+    Màn hình chính:
+     - Hiển thị tổng số ml nước đã uống trong ngày.
+     - Các nút cộng nhanh: +100ml, +200ml, +300ml.
+     - Màn hình lịch sử:
++ Hiển thị danh sách chi tiết các lần uống (thời gian + dung lượng).
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c7c093e8-7824-486c-8696-9e2bce9142d3" />
 
-In the project directory, you can run:
+3.Công nghệ sử dụng
+    Frontend: React + TypeScript (Vite)
+    Mobile: Capacitor
+    Lưu trữ: @capacitor/preferences (để lưu tổng lượng nước và lịch sử).
+    Native API: @capacitor/haptics (để rung khi thêm nước).
+    Routing: react-router-dom
 
-### `npm start`
+4. Hướng dẫn Cài đặt và Chạy
++ Yêu cầu Môi trường
+    Node.js: Phiên bản 18.x trở lên.
+    Android Studio: Phiên bản mới nhất (ví dụ: Iguana).
+    Java JDK: Bắt buộc phải cài đặt và cấu hình JDK 17. Các phiên bản Java mới hơn (như 21) sẽ gây lỗi build với AGP 8.2.1.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Bước 1: Cài đặt Dependencies
+    Mở terminal tại thư mục gốc của dự án và chạy:
+        npm install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Bước 2: Chạy trên Web (Để test nhanh)
+    Lệnh này sẽ khởi động server dev của Vite:
+        npm run dev
+    Mở trình duyệt và truy cập http://localhost:5173/ (hoặc cổng mà terminal hiển thị).
 
-### `npm test`
+Bước 3: Chạy trên Thiết bị Android
+    1.Build ứng dụng web:
+        npm run build
+    (Lệnh này sẽ tạo thư mục dist hoặc build chứa code web đã được tối ưu).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    2.Đồng bộ với Capacitor:
+        npx cap sync
+    (Lệnh này sao chép thư mục web build vào dự án android).
 
-### `npm run build`
+    3.Mở Android Studio:
+        npx cap open android
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    4.Build và Chạy trong Android Studio:
+        Chờ Android Studio "Sync" Gradle xong.
+        Kết nối thiết bị Android thật (đã bật USB Debugging) hoặc khởi động một Máy ảo (Emulator).
+        Nhấn nút "Run" (▶) trong Android Studio để cài và chạy ứng dụng.
+localhost
