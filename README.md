@@ -1,8 +1,8 @@
 Đề 6: Ứng dụng Theo Dõi Nước uống (Water Tracker)
 
 1. Thông tin Sinh viên
-    Họ và Tên: Hồ Duy Lợi
-    Mã Số Sinh Viên: 22IT162
+    Họ và Tên: Pham Minh Thang
+    Mã Số Sinh Viên: 22IT273
     Lớp: 22SE1
     Trường: VKU
 
